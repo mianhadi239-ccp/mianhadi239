@@ -14,17 +14,79 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+   
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: url("mianhadi.jpg") center/cover no-repeat;
 
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  animation: zoomFade 2.5s ease-out forwards;
+  opacity: 0;
+  transform: scale(1.1);
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: rgba(255, 255, 255, 0);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.navbar .btn-container{
+    background: #C8A06F;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-left: auto;
+}
+.navbar p {
+    color: #C8A06F;
+    font-size: 35px;
+    padding: 10px 20px;
+    font-weight: bold;
+    position: left
+}
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 2s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
+
+@keyframes zoomFade {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 header h1 {
-    font-size: 100px;
-    color: #C8A06F;
+    font-size: 350px;
+    color: #000000;
     text-shadow: 0 0 20px #C8A06F;
     margin: 0;
 }
@@ -40,9 +102,12 @@ header h1 {
 }
 @media screen and (min-width: 1600px) {
     header h1 {
-        font-size: 130px;
+        font-size: 200px;
+        font-family: Archivo, sans-serif;
+        font-weight: normal;
         color: #C8A06F;
         text-shadow: 0 0 20px #C8A06F;
+        position: center;
     }
     
 }
@@ -89,7 +154,7 @@ nav {
     top: 0;
     background: #111;
     padding: 15px;
-    text-align: center;
+    text-align: left;
     z-index: 100;
 }
 
@@ -100,53 +165,20 @@ nav a {
     font-weight: bold;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
+
 
 h2 {
     color: #C8A06F;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
+    font-size: 80px;
+    padding: 15px 300px;
 }
 
 /* CAR GALLERY */
-.cars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
 
-@media (max-width: 1000px) {
-    .cars {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-.car-card {
-    background: #1c1c1c;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s;
-    text-align: center;
-    padding-bottom: 15px;
-}
 
-.car-card:hover {
-    transform: scale(1.05);
-}
 
-.car-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.car-card p {
-    margin: 10px 0;
-    font-size: 16px;
-}
 
 /* BUTTON */
 .read-more {
@@ -168,10 +200,17 @@ h2 {
 
 /* ABOUT */
 .card {
-    background: #1a1a1a;
+    background: #00000000;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+.About-Me {
+    text-align: left;
+    font-size: 18px;
+    padding: 0 20px;
 }
 
 footer {
@@ -244,10 +283,11 @@ footer {
     color: #C8A06F;
 }
 .btn-container {
-    position: relative;
+    position: right;
     display: inline-block;
     padding: 12px 25px;
-    background: #C8A06F;
+    margin-top: 20px;
+    background: #ffffff;
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 30px;
@@ -276,7 +316,7 @@ footer {
 }
 
 .btn-container:hover {
-    color: #C8A06F;
+    color: #ffffff;
     transform: scale(1.08);
 }
 .social-media{
