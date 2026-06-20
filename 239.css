@@ -1,0 +1,332 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+  header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+header h1 {
+    font-size: 100px;
+    color: #C8A06F;
+    text-shadow: 0 0 20px #C8A06F;
+    margin: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 50px;
+        color: #7B7B7C;
+        text-shadow: 0 0 20px #7B7B7C;
+    }
+    
+}
+@media screen and (min-width: 1600px) {
+    header h1 {
+        font-size: 130px;
+        color: #C8A06F;
+        text-shadow: 0 0 20px #C8A06F;
+    }
+    
+}
+
+
+header p {
+    font-size: 18px;
+    opacity: 0.8;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    header p {
+        color: #ff0000;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    header p {
+        color: aliceblue;
+    }
+}
+
+@keyframes bg {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background:#C8A06F ;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: #C8A06F;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* CAR GALLERY */
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .cars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.car-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-card p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* BUTTON */
+.read-more {
+    background: #C8A06F;
+    color: black;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    transform: scale(1.1);
+    background: #050504;
+    color: #C8A06F;
+}
+
+/* ABOUT */
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+    color: #25D366;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: rgba(37, 211, 102, 0.15);
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+    color: white;
+}
+.read-more {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #C8A06F;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.read-more::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.read-more:hover::before {
+    left: 0;
+}
+
+.read-more:hover {
+    color: #C8A06F;
+}
+.btn-container {
+    position: relative;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #C8A06F;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+/* Sweep layer */
+.btn-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+/* Hover animation */
+.btn-container:hover::before {
+    left: 0;
+}
+
+.btn-container:hover {
+    color: #C8A06F;
+    transform: scale(1.08);
+}
+.social-media{
+    text-align:center;
+    padding:80px 20px;
+    background:rgba(255,255,255,0.03);
+}
+
+.social-media h2{
+    color:#C8A06F;
+    font-size:2.5rem;
+    margin-bottom:30px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:white;
+    padding:15px 30px;
+    border:1px solid #C8A06F;
+    border-radius:50px;
+    position:relative;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.social-links a::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:#C8A06F;
+    transition:0.5s;
+    z-index:-1;
+}
+
+.social-links a:hover::before{
+    left:0;
+}
+
+.social-links a:hover{
+    color:black;
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #C8A06F;
+}
