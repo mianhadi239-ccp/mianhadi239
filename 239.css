@@ -43,6 +43,12 @@ header {
     z-index: 1000;
 }
 
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+    }
+}
+
 .navbar .btn-container {
     background: #ffffff;
     color: black;
@@ -59,7 +65,17 @@ header {
     font-size: 35px;
     padding: 10px 20px;
     font-weight: bold;
-    position: left
+}
+
+@media screen and (max-width: 768px) {
+    .navbar p {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+    .navbar .btn-container {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
 
 .fade-up {
@@ -91,32 +107,25 @@ header {
 }
 
 header h1 {
-    font-size: 350px;
+    font-size: 120px;
+    font-family: Archivo, sans-serif;
+    font-weight: normal;
     color: #ffffff;
     text-shadow: 0 0 20px #ffffff;
     margin: 0;
+    text-align: center;
 }
 
-/* Mobile */
 @media screen and (max-width: 1000px) {
     header h1 {
-        font-size: 50px;
-        color: #ffffff;
-        text-shadow: 0 0 20px #ffffff;
+        font-size: 80px;
     }
-
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     header h1 {
-        font-size: 100px;
-        font-family: Archivo, sans-serif;
-        font-weight: normal;
-        color: #ffffff;
-        text-shadow: 0 0 20px #ffffff;
-        position: center;
+        font-size: 50px;
     }
-
 }
 
 
@@ -190,10 +199,19 @@ h2 {
     font-size: 80px;
     font-weight: 300;
     padding: 0 120px;
+}
 
-    @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+    h2 {
         font-size: 50px;
         padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 40px;
+        padding: 0 15px;
     }
 }
 
@@ -240,8 +258,8 @@ h2 {
 }
 
 .work-track .work-title {
-    margin: 10 0 5px;
-    padding: 15 30px;
+    margin: 10px 0 5px;
+    padding: 15px 30px;
     font-family: Archivo, sans-serif;
     font-size: 5.4em;
     line-height: 0.8em;
@@ -518,7 +536,6 @@ h2 {
 }
 
 .btn-container {
-    position: right;
     display: inline-block;
     padding: 12px 25px;
     margin-top: 20px;
@@ -530,11 +547,13 @@ h2 {
     overflow: hidden;
     z-index: 1;
     transition: 0.3s;
+}
 
-    @media screen and (max-width: 1000px) {
-        font-size: 10px;
-        nowrap: nowrap;
-        padding: 5px 5px;
+@media screen and (max-width: 1000px) {
+    .btn-container {
+        font-size: 12px;
+        white-space: nowrap;
+        padding: 8px 12px;
     }
 }
 
@@ -711,7 +730,7 @@ textarea {
 }
 
 button {
-    padding: 10px;
+    padding: 12px 20px;
     border-radius: 30px;
     border: none;
     background: #ffffff;
@@ -720,7 +739,16 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    width: 10%;
+    width: auto;
+    min-width: 120px;
+    justify-self: start;
+}
+
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+        justify-self: stretch;
+    }
 }
 
 button:hover {
@@ -729,40 +757,48 @@ button:hover {
 }
 
 /* Custom Cursor */
-body,
-a,
-button,
-input,
-textarea,
-.portfolio-block {
-    cursor: none !important;
+@media (hover: hover) and (pointer: fine) {
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    .portfolio-block {
+        cursor: none !important;
+    }
+
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        mix-blend-mode: difference;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    }
+
+    .custom-cursor.hover {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.1);
+        mix-blend-mode: normal;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
 }
 
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: white;
-    mix-blend-mode: difference;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-}
-
-.custom-cursor.hover {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.1);
-    mix-blend-mode: normal;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+@media (hover: none) or (pointer: coarse) {
+    .custom-cursor {
+        display: none !important;
+    }
 }
 
 .h4 {
-    margin: 10 0 5px;
+    margin: 10px 0 5px;
     padding: 0 130px;
     font-family: Archivo, sans-serif;
     font-size: 5.4em;
@@ -770,4 +806,18 @@ textarea,
     font-weight: 300;
     color: #fff;
     text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+    .h4 {
+        font-size: 4em;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .h4 {
+        font-size: 3em;
+        padding: 0 20px;
+    }
 }
