@@ -13,14 +13,15 @@
 </head>
 
 <body>
+  <div class="custom-cursor"></div>
   <nav class="navbar">
     <p class="fade-up">MIAN HADI</p>
-    <a href="#history" class="btn-container fade-up">Let's Work Together</a>
+    <a href="#contactForm" class="btn-container fade-up">Let's Work Together</a>
   </nav>
 
   <div class="hero">
     <header>
-      <h1 class="fade-up">GRAPHIC<br> DESIGNER.</h1>
+      <h1 class="fade-up">GRAPHIC<br> DESIGNER</h1>
 
     </header>
   </div>
@@ -92,6 +93,14 @@
       </div>
     </div>
   </section>
+  <h4 class="h4">Let's Start </h4>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" id="name">
+    <input type="email" placeholder="Email" id="email">
+    <input type="number" placeholder="Number" id="number">
+    <textarea name="" id="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 
   <a href="https://wa.me/923318666239" class="whatsapp-float" target="_blank">
     WhatsApp
@@ -190,6 +199,27 @@
 
     document.querySelectorAll('.reveal').forEach(el => {
       observer.observe(el);
+    });
+
+    const messageInput = document.getElementById('message');
+    if (messageInput) {
+      messageInput.addEventListener('input', function () {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+      });
+    }
+
+    const cursor = document.querySelector('.custom-cursor');
+    const hoverElements = document.querySelectorAll('a, button, .portfolio-block, input, textarea');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    hoverElements.forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
     });
   </script>
 </body>

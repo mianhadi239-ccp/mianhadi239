@@ -185,8 +185,10 @@ nav a {
 h2 {
     color: #ffffff;
     text-align: left;
+    font-family: Archivo, sans-serif;
     margin-bottom: 30px;
     font-size: 80px;
+    font-weight: 300;
     padding: 0 120px;
 
     @media screen and (max-width: 1000px) {
@@ -320,10 +322,9 @@ h2 {
 
 .portfolio-image {
     width: 100%;
-    height: 65vh;
-    object-fit: contain;
+    height: 50vh;
+    object-fit: cover;
     display: block;
-    border-radius: 12px;
 }
 
 .portfolio-detail {
@@ -364,7 +365,7 @@ h2 {
     }
 
     .portfolio-image {
-        height: 55vh;
+        height: 56vh;
     }
 }
 
@@ -545,7 +546,7 @@ h2 {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0);
+    background: #5e5a5a;
     transition: 0.4s ease;
     z-index: -1;
 }
@@ -664,4 +665,109 @@ h2 {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+form {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form h2,
+form textarea,
+form button {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+input,
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: #000;
+}
+
+textarea {
+    resize: none;
+    min-height: 70px;
+    overflow: hidden;
+}
+
+button {
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 10%;
+}
+
+button:hover {
+    background: #5e5a5a;
+    color: #ffffff;
+}
+
+/* Custom Cursor */
+body,
+a,
+button,
+input,
+textarea,
+.portfolio-block {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-cursor.hover {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    mix-blend-mode: normal;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.h4 {
+    margin: 10 0 5px;
+    padding: 0 130px;
+    font-family: Archivo, sans-serif;
+    font-size: 5.4em;
+    line-height: 0.8em;
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
 }
