@@ -72,6 +72,7 @@ header {
         font-size: 24px;
         padding: 10px 0;
     }
+
     .navbar .btn-container {
         padding: 8px 15px;
         font-size: 14px;
@@ -383,7 +384,9 @@ h2 {
     }
 
     .portfolio-image {
-        height: 56vh;
+        height: auto;
+        max-height: 60vh;
+        object-fit: contain;
     }
 }
 
@@ -695,6 +698,7 @@ form {
     gap: 20px;
     padding: 20px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 form h2,
@@ -758,6 +762,7 @@ button:hover {
 
 /* Custom Cursor */
 @media (hover: hover) and (pointer: fine) {
+
     body,
     a,
     button,
