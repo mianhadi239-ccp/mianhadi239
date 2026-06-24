@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #000000;
@@ -73,6 +73,7 @@ header {
     margin-left: auto;
 }
 
+
 .navbar p {
     color: #ffffff;
     font-size: 35px;
@@ -92,11 +93,56 @@ header {
     }
 }
 
+
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 2s ease-out forwards;
     animation-delay: 1.5s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes zoomFade {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.HOME {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 2s ease-out forwards;
+    animation-delay: 1.5s;
+       color: #ffffff;
+    font-size: 35px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar p {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .navbar .btn-container {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
 
 @keyframes fadeUp {
