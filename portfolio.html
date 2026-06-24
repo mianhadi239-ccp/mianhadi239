@@ -38,11 +38,12 @@
       /* ── CARD COLUMN (right side) ── */
       .hero-cards {
         position: absolute !important;
-        top: 60px !important;
+        top: 80px !important;
         right: 30px !important;
-        bottom: 20px;
-        width: 850px !important;
-        display: list-item;
+        bottom: 20px !important;
+        width: min(850px, calc(100% - 60px)) !important;
+        display: flex !important;
+        flex-direction: column !important;
         scroll-behavior: smooth;
         align-items: center !important;
         gap: 16px !important;
@@ -51,8 +52,8 @@
         overflow-y: auto !important;
         scrollbar-width: none !important;
         background-color: #00000000 !important;
-        height: 1100px !important;
-        padding: 20px;
+        max-height: calc(100vh - 110px) !important;
+        padding: 20px 16px !important;
       }
       .hero-cards::-webkit-scrollbar {
         display: none !important;
@@ -61,8 +62,9 @@
       /* ── CARD ── */
       .hero-cards .project-card {
         pointer-events: auto !important;
-
-        width: 800px !important;
+        width: min(800px, 100%) !important;
+        max-width: 800px !important;
+        min-width: 280px !important;
         height: auto !important;
         border-radius: 18px !important;
         overflow: hidden !important;
@@ -77,7 +79,7 @@
           box-shadow 0.3s ease !important;
         display: flex !important;
         flex-direction: column !important;
-        margin: 25px auto !important;
+        margin: 20px auto !important;
       }
       .hero-cards .project-card:hover {
         transform: translateX(-6px) scale(1.02) !important;
@@ -92,7 +94,8 @@
         transform: none !important;
         width: 100% !important;
         height: auto !important;
-        object-fit: unset !important;
+        max-height: 520px !important;
+        object-fit: contain !important;
         border-radius: 16px 16px 0 0 !important;
         z-index: 1 !important;
         display: block !important;
@@ -137,6 +140,15 @@
         left: 0 !important;
         width: 100% !important;
         z-index: 200 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 12px 24px !important;
+        box-sizing: border-box !important;
+      }
+      .navbar .btn-container {
+        position: relative !important;
+        flex-shrink: 0 !important;
       }
 
       /* ────────────────────────────────
@@ -145,16 +157,29 @@
       ──────────────────────────────── */
       @media (max-width: 1024px) {
         .hero-cards {
-          width: 340px !important;
-          gap: 12px !important;
-          padding: 75px 14px 14px 14px !important;
+          width: min(340px, calc(100% - 32px)) !important;
+          gap: 14px !important;
+          padding: 80px 14px 14px 14px !important;
+          top: 90px !important;
+          right: 16px !important;
+          max-height: calc(100vh - 110px) !important;
         }
         .hero-cards .project-card {
-          width: 312px !important;
+          width: 100% !important;
+          max-width: 312px !important;
         }
         .hero-cards .main-image {
-          height: auto !important;
-          object-fit: unset !important;
+          max-height: 44vh !important;
+        }
+        .navbar {
+          padding: 10px 18px !important;
+        }
+        .navbar .HOME {
+          font-size: 18px !important;
+        }
+        .navbar .btn-container {
+          padding: 10px 16px !important;
+          font-size: 14px !important;
         }
       }
 
@@ -185,23 +210,32 @@
           ) !important;
         }
         .hero-cards .project-card {
-          width: 190px !important;
-          min-width: 190px !important;
+          width: 220px !important;
+          min-width: 220px !important;
+          max-width: 220px !important;
           flex-shrink: 0 !important;
         }
         .hero-cards .main-image {
-          height: auto !important;
-          object-fit: unset !important;
+          max-height: 240px !important;
+          object-fit: cover !important;
           border-radius: 14px 14px 0 0 !important;
         }
         .hero-cards .center-text h3 {
-          font-size: 11px !important;
+          font-size: 12px !important;
         }
         .hero-cards .center-text p {
-          font-size: 9px !important;
+          font-size: 10px !important;
         }
         .hero-cards .info {
           padding: 8px 10px 10px !important;
+        }
+        .navbar {
+          padding: 10px 14px !important;
+        }
+        .navbar .btn-container {
+          padding: 8px 12px !important;
+          font-size: 13px !important;
+          margin-left: 8px !important;
         }
       }
     </style>
