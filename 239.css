@@ -77,10 +77,11 @@ header h2 {
     display: flex;
     justify-content: center;
 }
+
 .developer-left2 {
     display: flex;
     justify-content: center;
-    box-shadow: 0px 80px 50px #ffffff; 
+    box-shadow: 0px 80px 50px #ffffff;
     width: 500px;
     height: 300px;
 
@@ -130,9 +131,10 @@ header h2 {
     animation: fadeUp 2s ease-out forwards;
     animation-delay: 2.0s;
 }
-.developer-left3{
+
+.developer-left3 {
     display: flex;
-    justify-content: center;        
+    justify-content: center;
 }
 
 
@@ -141,7 +143,7 @@ header h2 {
     height: auto;
     transform: translateX(0%) !important;
     object-fit: contain;
-    box-shadow: 0px 0px  20px #ffffff; 
+    box-shadow: 0px 0px 20px #ffffff;
 }
 
 @keyframes fadeUp {
@@ -396,7 +398,7 @@ header h2 {
     background-color: #ffffff;
 }
 
-.personal p5 {
+.personal-p5 {
     font-size: 70px;
     text-align: center;
     padding-top: 0px;
@@ -412,6 +414,7 @@ header h2 {
     font-weight: bold;
 }
 
+
 .certifications1 img {
     width: 300px;
     height: 300px;
@@ -425,6 +428,7 @@ header h2 {
     padding-left: 150px;
     object-fit: cover;
 }
+
 .nav p {
     color: #ffffff;
     font-size: 35px;
@@ -443,26 +447,28 @@ header h2 {
         font-size: 14px;
     }
 }
+
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
+
 .HOME {
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 2s ease-out forwards;
     animation-delay: 1.5s;
-       color: #ffffff;
+    color: #ffffff;
     font-size: 35px;
     padding: 10px 20px;
     font-weight: bold;
 }
 
 @media screen and (max-width: 1000px) {
-    .HOME{
-        font-size: 25px; 
+    .HOME {
+        font-size: 25px;
         padding: 10px 0;
     }
 
@@ -492,6 +498,7 @@ nav a {
         transform: scale(1);
     }
 }
+
 .site-footer {
     background: #050505;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -587,4 +594,3 @@ nav a {
         justify-content: center;
     }
 }
-
