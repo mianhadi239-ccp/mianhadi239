@@ -35,7 +35,7 @@
     /* ── CARD COLUMN (right side) ── */
     .hero-cards {
       position: absolute !important;
-      top: 60px !important;
+      top: 90px !important;
       right: 30px !important;
       bottom: 20px;
       width: 850px !important;
@@ -52,7 +52,6 @@
       padding: 20px;
     }
 
-
     .hero-cards::-webkit-scrollbar {
       display: none !important;
     }
@@ -65,7 +64,7 @@
       height: auto !important;
       border-radius: 18px !important;
       overflow: hidden !important;
-      background: rgba(20, 20, 20, 0.82) !important;
+      background: #2D7E9A !important;
       backdrop-filter: blur(14px) !important;
       -webkit-backdrop-filter: blur(14px) !important;
       border: 1px solid rgba(255, 255, 255, 0.18) !important;
@@ -143,6 +142,51 @@
       z-index: 200 !important;
     }
 
+    /* ── HERO TEXT LEFT ── */
+    .hero-text-left {
+      position: absolute !important;
+      top: 50% !important;
+      left: 8% !important;
+      transform: translateY(-50%) !important;
+      color: #fff !important;
+      z-index: 150 !important;
+      max-width: 450px !important;
+      text-align: left !important;
+    }
+
+    .h4 {
+      margin: 10px 0 5px;
+      padding: 0 130px;
+      font-family: Archivo, sans-serif;
+      font-size: 5.4em;
+      line-height: 0.8em;
+      font-weight: 600 !important;
+      color: #ce0202;
+      text-align: left;
+    }
+
+    .hero-text-left h1 {
+      font-size: 90px !important;
+      line-height: 1.1 !important;
+      margin: 0 0 20px 0 !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: -1px !important;
+      text-align: left !important;
+      align-items: left !important;
+    }
+
+    .hero-text-left p {
+      font-size: 48px !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      line-height: 1.6 !important;
+      margin: 0 !important;
+      font-weight: 300 !important;
+      text-align: left !important;
+      padding-right: 250px !important;
+      
+    }
+
     /* ────────────────────────────────
          TABLET / iPAD  (≤ 1024px)
          Narrower column, smaller cards
@@ -161,6 +205,15 @@
       .hero-cards .main-image {
         height: auto !important;
         object-fit: unset !important;
+      }
+
+      .hero-text-left {
+        left: 5% !important;
+        max-width: 300px !important;
+      }
+
+      .hero-text-left h1 {
+        font-size: 48px !important;
       }
     }
 
@@ -211,6 +264,19 @@
 
       .hero-cards .info {
         padding: 8px 10px 10px !important;
+      }
+
+      .hero-text-left {
+        top: 30% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        text-align: center !important;
+        width: 90% !important;
+        max-width: none !important;
+      }
+
+      .hero-text-left h1 {
+        font-size: 42px !important;
       }
     }
   </style>
@@ -303,8 +369,11 @@
 
     </a>
   </nav>
-    <header>
-      <!-- Add any hero text you want here for portfolio.html -->
+    <header class="hero-text-left">
+      <p> My Work </p>
+      <h1>Design.<br> <span style="color: #2d7e9a;">Develop.</span> <br>Deliver.</h1>
+      
+      
     </header>
   </div>
 

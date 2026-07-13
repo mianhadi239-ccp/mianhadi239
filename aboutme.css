@@ -1100,7 +1100,16 @@ details p{
     color: #ffffff;
 }
 
-
+.h4 {
+    margin: 10px 0 5px;
+    padding: 0 130px;
+    font-family: Archivo, sans-serif;
+    font-size: 5.4em;
+    line-height: 0.8em;
+    font-weight: 300;
+    color: #ce0202;
+    text-align: left;
+}
 
 
 
@@ -1256,4 +1265,48 @@ details p{
 .footer-bottom p{
     color:#777;
     font-size:15px;
+}
+.scroll-explore{
+    margin-top:70px;
+}
+
+.scroll-btn{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    text-decoration:none;
+    width:fit-content;
+}
+
+.arrow{
+    width:60px;
+    height:60px;
+    border:2px solid rgba(255,255,255,.25);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#4cb8e7;
+    font-size:22px;
+    transition:.4s ease;
+    backdrop-filter:blur(10px);
+}
+
+.scroll-text{
+    font-size:28px;
+    font-weight:500;
+    color:#ffffff;
+    transition:.4s;
+}
+
+.scroll-btn:hover .arrow{
+    background:#4cb8e7;
+    color:#fff;
+    transform:translateY(6px);
+    box-shadow:0 0 25px rgba(76,184,231,.45);
+}
+
+.scroll-btn:hover .scroll-text{
+    color:#4cb8e7;
+    letter-spacing:1px;
 }
