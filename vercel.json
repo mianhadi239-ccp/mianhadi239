@@ -1,8 +1,9 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/", "dest": "/239.html" },
+    { "src": "/", "dest": "/hadiweb.html" },
     { "src": "/portfolio", "dest": "/portfolio.html" },
-    { "src": "/aboutme", "dest": "/aboutme.html" }
+    { "src": "/aboutme", "dest": "/aboutme.html" }, 
+    { "src": "/home", "dest": "/hadiweb.html" }
   ]
 }
