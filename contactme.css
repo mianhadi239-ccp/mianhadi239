@@ -470,3 +470,80 @@ body {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .navbar {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        height: auto !important;
+        padding: 16px 20px !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+    }
+    .menu-center {
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        justify-content: center !important;
+        order: 3 !important;
+        gap: 16px !important;
+    }
+    .HOME {
+        font-size: 24px !important;
+        padding: 6px 0 !important;
+    }
+    .menu {
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+    }
+    .btn-container {
+        width: auto !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .hero-text-left h1 {
+        font-size: 40px !important;
+    }
+    .hero-text-left p {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 12px 14px !important;
+    }
+    .menu-center {
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+    }
+    .menu {
+        font-size: 13px !important;
+        padding: 5px 8px !important;
+    }
+    .btn-container {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+    }
+    .contact-form {
+        padding: 20px !important;
+        border-radius: 20px !important;
+    }
+    .form-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    .form-header h2 {
+        font-size: 26px !important;
+    }
+    .form-header p {
+        font-size: 15px !important;
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+        font-size: 15px !important;
+        padding: 14px 16px !important;
+    }
+}
+

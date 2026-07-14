@@ -699,3 +699,79 @@ nav a {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .navbar {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        height: auto !important;
+        padding: 16px 20px !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+    }
+    .menu-center {
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        justify-content: center !important;
+        order: 3 !important;
+        gap: 16px !important;
+    }
+    .HOME {
+        font-size: 24px !important;
+        padding: 6px 0 !important;
+    }
+    .menu {
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+    }
+    .btn-container {
+        margin: 0 auto !important;
+        width: auto !important;
+    }
+    header h1 {
+        font-size: 48px !important;
+        padding-bottom: 30px !important;
+    }
+    .developer-text {
+        font-size: 16px !important;
+        padding: 0 8px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 12px 14px !important;
+    }
+    .HOME {
+        font-size: 20px !important;
+    }
+    .menu-center {
+        gap: 8px !important;
+    }
+    .menu {
+        font-size: 13px !important;
+        padding: 5px 8px !important;
+    }
+    .btn-container {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+    }
+    .professional-credentials {
+        font-size: 22px !important;
+        padding-top: 30px !important;
+    }
+    .personal-p5 {
+        font-size: 36px !important;
+        padding: 0 16px !important;
+    }
+    .developer-grid, .developer-grid2, .developer-grid3 {
+        padding: 20px 16px !important;
+        gap: 20px !important;
+    }
+    .developer-right h2 {
+        font-size: 28px !important;
+    }
+}
+

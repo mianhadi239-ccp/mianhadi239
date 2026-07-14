@@ -1360,6 +1360,13 @@ padding-top: 15px;
         font-size: 14px;
         padding: 4px 8px;
     }
+    .navbar {
+        padding: 12px 14px;
+    }
+    .btn-container {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
 }
 
 @media screen and (max-width: 1200px) {

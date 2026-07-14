@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -279,6 +279,7 @@
         font-size: 42px !important;
       }
     }
+    /* Responsive layout fixes for tablets and phones */
     @media (max-width: 1200px) {
       .superman {
         display: flex !important;
@@ -287,6 +288,23 @@
         min-height: 100vh !important;
         padding-top: 100px !important;
       }
+      .navbar {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        flex-wrap: wrap !important;
+        height: auto !important;
+        padding: 16px 20px !important;
+        gap: 12px !important;
+      }
+      .menu-center {
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 16px !important;
+      }
       .hero-text-left {
         position: relative !important;
         top: auto !important;
@@ -294,8 +312,8 @@
         transform: none !important;
         text-align: center !important;
         max-width: 100% !important;
-        padding: 0 20px !important;
-        margin: 0 auto 30px !important;
+        padding: 0 20px 20px !important;
+        margin: 0 auto 20px !important;
       }
       .hero-text-left h1, .hero-text-left p {
         text-align: center !important;
@@ -314,22 +332,95 @@
         bottom: auto !important;
         right: auto !important;
         left: auto !important;
-        width: 100% !important;
+        width: min(100%, 680px) !important;
         height: auto !important;
-        padding: 20px !important;
+        padding: 10px 0 20px !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px !important;
-        margin-bottom: 50px !important;
+        gap: 16px !important;
+        margin: 0 auto 50px !important;
       }
       .hero-cards .project-card {
         width: 100% !important;
-        max-width: 500px !important;
+        max-width: 560px !important;
         margin: 0 auto !important;
       }
       .hero-cards .main-image {
         height: auto !important;
         object-fit: contain !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .superman {
+        padding-top: 80px !important;
+      }
+      .navbar {
+        padding: 14px 16px !important;
+      }
+      .HOME {
+        font-size: 22px !important;
+        padding: 6px 0 !important;
+      }
+      .menu-center {
+        gap: 10px !important;
+        flex-wrap: wrap !important;
+      }
+      .menu {
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+      }
+      .btn-container {
+        width: 100% !important;
+        max-width: 220px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+      }
+      .hero-text-left {
+        max-width: 100% !important;
+      }
+      .hero-text-left h1 {
+        font-size: 42px !important;
+      }
+      .hero-text-left p {
+        font-size: 24px !important;
+      }
+      .hero-cards {
+        width: 100% !important;
+        padding: 6px 10px 20px !important;
+      }
+      .hero-cards .project-card {
+        max-width: 100% !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        padding: 12px 12px 14px !important;
+      }
+      .HOME {
+        font-size: 20px !important;
+      }
+      .menu {
+        font-size: 13px !important;
+        padding: 5px 8px !important;
+      }
+      .hero-text-left h1 {
+        font-size: 34px !important;
+      }
+      .hero-text-left p {
+        font-size: 20px !important;
+      }
+      .hero-cards .info {
+        flex-direction: column !important;
+        gap: 6px !important;
+        align-items: center !important;
+      }
+      .hero-cards .center-text h3 {
+        font-size: 12px !important;
+      }
+      .hero-cards .center-text p {
+        font-size: 9px !important;
       }
     }
   </style>
