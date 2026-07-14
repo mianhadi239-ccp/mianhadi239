@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Hadi</title>
+  <link rel="stylesheet" href="contactme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="custom-cursor"></div>
+  <nav class="navbar">
+    <a href="/hadiweb.html" class="HOME">
+        MIAN HADI
+      </a>
+    <div class="menu-center">
+      <a href="/portfolio.html" class="menu">Portfolio</a>
+      <a href="/aboutme.html" class="menu">About Me</a>
+      <a href="/contact.html" class="menu">contact</a>
+    </div>
+    <a href="#contactForm" class="btn-container fade-up">Let's Work Together</a>
+
+    </a>
+  </nav>
+  <div>
+    <header class="hero-text-left">
+      <p> CONTACT ME </p>
+      <h1>Lets Create<br> <span style="color: #2d7e9a;">Something</span></h1>
+     
+
+    </header>
+    
+    <div class="contact-form">
+
+    <div class="form-header">
+        <div class="form-icon">
+            <i class="fa-regular fa-paper-plane"></i>
+        </div>
+
+        <div>
+            <h2>Let's Connect</h2>
+            <p>Fill out the form below and I'll get back to you soon.</p>
+        </div>
+    </div>
+
+    <form id="contactForm">
+
+        <div class="input-row">
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-row">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <input type="text" id="subject" placeholder="Subject">
+        </div>
+
+        <textarea id="message" placeholder="Write your message..."></textarea>
+
+        <button type="submit">
+            Send Message
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </form>
+
+</div>
+  </div>
+  <script>
+    const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappNumber = "923318666239"; 
+
+    const text =
+`*New Contact Form Submission*
+
+Name: ${name}
+
+Email: ${email}
+
+Phone: ${phone}
+
+Subject: ${subject}
+
+Message:
+${message}`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+
+    contactForm.reset();
+
+});
+  </script>
+  
