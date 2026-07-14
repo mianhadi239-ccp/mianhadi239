@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(#1587a1, #eac7b5);
@@ -1310,19 +1310,4 @@ details p{
     color:#4cb8e7;
     letter-spacing:1px;
 }
-/* --- Media Queries for aboutme.css --- */
-@media screen and (max-width: 1200px) {
-    h2, .work-track .work-title { padding: 0 40px; }
-    .portfolio-block { max-width: 80vw; }
-}
 
-@media screen and (max-width: 768px) {
-    h2, .work-track .work-title { padding: 0 20px; font-size: 40px; }
-    .about-me { text-align: center; }
-    .card { margin: 0 20px; box-sizing: border-box;}
-    .portfolio-block { max-width: 90vw; }
-    .professional-credentials { flex-direction: column; }
-    .btn-container { padding: 10px 15px; font-size: 14px; }
-    .footer-content { flex-direction: column; align-items: center; text-align: center; }
-    form { grid-template-columns: 1fr; padding: 15px; box-sizing: border-box; }
-}

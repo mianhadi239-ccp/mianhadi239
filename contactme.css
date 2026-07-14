@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin:0;
     min-height:100vh;
     font-family: Arial, sans-serif;
@@ -434,21 +434,4 @@ body {
     transform:translateY(-4px);
 
 }
-/* --- Media Queries for contactme.css --- */
-@media screen and (max-width: 1200px) {
-    .hero-text-left { position: relative !important; top: 150px !important; left: 50% !important; transform: translate(-50%, 0) !important; text-align: center !important; width: 90% !important; max-width: 100% !important; }
-    .hero-text-left h1, .hero-text-left p { text-align: center !important; padding-right: 0 !important; }
-    .hero-text-left h1 { font-size: 60px !important; }
-    .hero-text-left p { font-size: 30px !important; }
-    .contact-form { position: relative !important; top: auto !important; right: auto !important; transform: none !important; margin: 100px auto 50px auto !important; width: 90% !important; max-width: 600px !important; }
-}
 
-@media screen and (max-width: 768px) {
-    .hero-text-left { top: 100px !important; }
-    .hero-text-left h1 { font-size: 40px !important; }
-    .hero-text-left p { font-size: 20px !important; }
-    .contact-form { padding: 25px !important; margin-top: 50px !important; }
-    .form-header h2 { font-size: 24px !important; }
-    .contact-form input, .contact-form textarea { font-size: 15px !important; padding: 12px 15px !important; }
-    .input-row { flex-direction: column !important; gap: 0 !important; }
-}

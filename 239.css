@@ -639,26 +639,4 @@ nav a {
     color:#777;
     font-size:15px;
 }
-/* --- Media Queries for 239.css --- */
-@media screen and (max-width: 1200px) {
-    .developer-grid, .developer-grid2, .developer-grid3 { padding: 50px 20px; grid-template-columns: 1fr; gap: 40px; box-sizing: border-box; }
-    .developer-image, .developer-left2 { width: 100%; max-width: 500px; height: auto; }
-    .certification img { width: 100%; max-width: 750px; height: auto; padding-left: 0; box-sizing: border-box; }
-    .certifications1 img { padding-left: 0; margin: 0 auto; display: block; box-sizing: border-box; width: 100%; max-width: 300px; height: auto;}
-    .mainimage1 { padding-left: 0; padding-bottom: 50px; text-align: center; box-sizing: border-box; }
-    .professional-credentials { flex-direction: column; padding-top: 50px; text-align: center; }
-    .professional-credentials::before, .professional-credentials::after { display: none; }
-    header { height: auto; padding: 100px 20px 50px 20px; box-sizing: border-box; }
-}
 
-@media screen and (max-width: 768px) {
-    header h1 { font-size: 40px; padding-bottom: 40px; }
-    header h2 { font-size: 30px; }
-    .developer-text { font-size: 16px; padding: 0 15px; text-align: center; }
-    .personal-p5 { font-size: 40px; }
-    .p2 { font-size: 18px; }
-    .footer-container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-    .footer-links::before, .footer-contact::before, .footer-social::before { display: none; }
-    .footer-links, .footer-contact, .footer-social { padding-left: 0; }
-    .social-icons { justify-content: center; }
-}
