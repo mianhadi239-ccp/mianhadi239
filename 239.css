@@ -17,7 +17,22 @@ header {
     position: relative;
     z-index: 1;
     font-size: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+    padding: 100px 15px 40px;
+    }
 }
 
 header h1 {
@@ -31,36 +46,96 @@ header h1 {
     padding-bottom: 80px;
 }
 
+@media screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 50px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+}
+
 .developer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     align-items: start;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .developer-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .developer-grid {
+        padding: 0 15px;
+        gap: 20px;
+    }
 }
 
 .developer-grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     align-items: start;
-    padding-right: 500px;
-    padding-top: 100px;
+    padding: 100px 40px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .developer-grid2 {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .developer-grid2 {
+        padding: 40px 15px;
+        gap: 20px;
+    }
 }
 
 .developer-grid3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     align-items: start;
-    padding-left: 500px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 40px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .developer-grid3 {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .developer-grid3 {
+        padding: 40px 15px;
+        gap: 20px;
+    }
 }
 
 header h2 {
@@ -228,12 +303,28 @@ header h2 {
     gap: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+    .menu-center {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%;
+        justify-content: center;
+        order: 3;
+        margin-top: 10px;
+        gap: 20px;
+    }
+    .navbar .btn-container {
+        margin-left: 0;
+    }
+}
+
 .navbar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 65px;
+    min-height: 65px;
     background: rgba(255, 255, 255, 0);
 
     display: flex;
@@ -243,12 +334,39 @@ header h2 {
     box-sizing: border-box;
     z-index: 1000;
     margin-top: 20px;
+    flex-wrap: wrap;
+}
 
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 0 20px;
+        height: auto;
+        min-height: 65px;
+    }
+    .menu-center {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%;
+        justify-content: center;
+        order: 3;
+        margin-top: 10px;
+        gap: 20px;
+    }
+    .navbar .btn-container {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 0 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-center {
+        gap: 15px;
+        flex-wrap: wrap;
     }
 }
 
@@ -526,6 +644,40 @@ nav a {
     background:#f6efe7;
     padding:40px 8% 20px;
     border-top:1px solid rgba(0,0,0,.08);
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+    .footer-social {
+        grid-column: 1 / -1;
+    }
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        padding-left: 0;
+    }
+    .footer-links::before,
+    .footer-contact::before,
+    .footer-social::before {
+        display: none;
+    }
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 .footer-container{
