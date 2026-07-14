@@ -1361,3 +1361,25 @@ padding-top: 15px;
         padding: 4px 8px;
     }
 }
+/* --- Media Queries for hadiweb.css --- */
+@media screen and (max-width: 1200px) {
+    .hero { gap: 50px; flex-direction: column; text-align: center; padding-top: 120px; height: auto; box-sizing: border-box; }
+    .hero p { font-size: 50px; padding: 0; }
+    .service section { gap: 50px; flex-direction: column; padding: 0 20px; box-sizing: border-box; }
+    .service-card1 { padding-left: 0; }
+    .image2, .image3 { width: 100%; max-width: 400px; height: auto; margin: 0 auto; display: block; }
+    .container { width: 100%; padding: 40px 20px; box-sizing: border-box;}
+}
+
+@media screen and (max-width: 768px) {
+    .hero { border-radius: 0 0 50px 50px; padding-bottom: 50px; }
+    .hero p { font-size: 35px; }
+    .service { border-radius: 0 0 50px 50px; padding: 50px 20px; }
+    .services-title, .cards-title, .heading h1 { font-size: 40px; text-align: center; }
+    .cards-section { border-radius: 0 0 50px 50px; padding: 50px 20px; box-sizing: border-box; }
+    .cards-grid, .cards { flex-direction: column; align-items: center; }
+    .heading p { width: 100%; font-size: 16px; }
+    .projects { border-radius: 50px; padding: 60px 15px; box-sizing: border-box;}
+    .service-card { align-items: center; text-align: center; }
+    .card { width: 100%; max-width: 320px; margin: 0 auto; }
+}
