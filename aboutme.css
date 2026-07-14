@@ -1,4 +1,4 @@
-﻿body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(#1587a1, #eac7b5);
@@ -1309,5 +1309,48 @@ details p{
 .scroll-btn:hover .scroll-text{
     color:#4cb8e7;
     letter-spacing:1px;
+}
+
+@media screen and (max-width: 1200px) {
+    h2, .work-track .work-title {
+        padding: 0 40px !important;
+    }
+    .portfolio-block {
+        max-width: 80vw !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2, .work-track .work-title {
+        padding: 0 20px !important;
+        font-size: 40px !important;
+    }
+    .about-me {
+        text-align: center !important;
+    }
+    .card {
+        margin: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+    .portfolio-block {
+        max-width: 90vw !important;
+    }
+    .professional-credentials {
+        flex-direction: column !important;
+    }
+    .btn-container {
+        padding: 10px 15px !important;
+        font-size: 14px !important;
+    }
+    .footer-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    form {
+        grid-template-columns: 1fr !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+    }
 }
 

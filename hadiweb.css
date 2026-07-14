@@ -1,4 +1,4 @@
-﻿body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
    background-color: #eac7b5;
@@ -1359,6 +1359,88 @@ padding-top: 15px;
     .menu {
         font-size: 14px;
         padding: 4px 8px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        gap: 50px !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-top: 120px !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+    }
+    .hero p {
+        font-size: 50px !important;
+        padding: 0 !important;
+    }
+    .service section {
+        gap: 50px !important;
+        flex-direction: column !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+    .service-card1 {
+        padding-left: 0 !important;
+    }
+    .image2, .image3 {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    .container {
+        width: 100% !important;
+        padding: 40px 20px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        border-radius: 0 0 50px 50px !important;
+        padding-bottom: 50px !important;
+    }
+    .hero p {
+        font-size: 35px !important;
+    }
+    .service {
+        border-radius: 0 0 50px 50px !important;
+        padding: 50px 20px !important;
+    }
+    .services-title, .cards-title, .heading h1 {
+        font-size: 40px !important;
+        text-align: center !important;
+    }
+    .cards-section {
+        border-radius: 0 0 50px 50px !important;
+        padding: 50px 20px !important;
+        box-sizing: border-box !important;
+    }
+    .cards-grid, .cards {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .heading p {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+    .projects {
+        border-radius: 50px !important;
+        padding: 60px 15px !important;
+        box-sizing: border-box !important;
+    }
+    .service-card {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .card {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
     }
 }
 

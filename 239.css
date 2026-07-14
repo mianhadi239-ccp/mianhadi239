@@ -1,4 +1,4 @@
-﻿body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background:linear-gradient(#eac7b5,#1587a1);
@@ -638,5 +638,64 @@ nav a {
 .footer-bottom p{
     color:#777;
     font-size:15px;
+}
+
+@media screen and (max-width: 1200px) {
+    .developer-grid, .developer-grid2, .developer-grid3 {
+        padding: 50px 20px !important;
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+    .developer-image, .developer-left2 {
+        width: 100% !important;
+        max-width: 500px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+    .certification img {
+        width: 100% !important;
+        max-width: 750px !important;
+        height: auto !important;
+        padding-left: 0 !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    .certifications1 img {
+        padding-left: 0 !important;
+        margin: 0 auto !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+    }
+    .mainimage1 {
+        padding-left: 0 !important;
+        padding-bottom: 50px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+    .professional-credentials {
+        flex-direction: column !important;
+        padding-top: 50px !important;
+        text-align: center !important;
+    }
+    .professional-credentials::before, .professional-credentials::after {
+        display: none !important;
+    }
+    header {
+        height: auto !important;
+        padding: 100px 20px 50px 20px !important;
+        box-sizing: border-box !important;
+    }
+    .developer-right {
+        align-items: center !important;
+        text-align: center !important;
+    }
 }
 
